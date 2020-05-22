@@ -3,7 +3,7 @@ FROM ruby:2.6
 ENV APP_DIR /sample_app
 
 RUN apt-get update -qq \
- && apt-get install -y nodejs default-mysql-client \
+ && apt-get install -y nodejs postgresql-client \
  && mkdir ${APP_DIR}
 
 WORKDIR ${APP_DIR}
