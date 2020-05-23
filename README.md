@@ -33,8 +33,9 @@ $ make clean
 ```
 
 ### Development
-#### Bundle Install
+#### Bundle Update & Install
 ```
+$ make bundle.update
 $ make bundle.install
 ```
 
@@ -42,4 +43,9 @@ $ make bundle.install
 ```
 $ make docker.up
 $ make docker .down
+```
+
+#### Rails Test
+```
+$ make rails.test
 ```
