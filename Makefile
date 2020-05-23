@@ -25,6 +25,9 @@ rails.new:
 	docker-compose run --rm web rails _5.1.6_ new . --force --no-deps --database=postgresql
 	docker-compose run --rm web rm -rf .git* README.md
 
+rails.test:
+	docker-compose run --rm web rails test
+
 rake.db.create:
 	docker-compose run --rm web rake db:create
 
