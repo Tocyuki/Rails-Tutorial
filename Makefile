@@ -21,6 +21,9 @@ docker.up:
 docker.down:
 	docker-compose down
 
+docker.restart.web:
+	docker-compose restart web
+
 rails.new:
 	docker-compose run --rm web rails _5.1.6_ new . --force --no-deps --database=postgresql
 	docker-compose run --rm web rm -rf .git* README.md
