@@ -28,6 +28,9 @@ rails.new:
 rails.test:
 	docker-compose run --rm web rails test
 
+rails.console:
+	docker-compose run --rm web rails console
+
 rake.db.create:
 	docker-compose run --rm web rake db:create
 

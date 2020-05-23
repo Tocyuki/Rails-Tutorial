@@ -3,12 +3,14 @@ Study [Rails Tutorial](https://railstutorial.jp/chapters/beginning?version=5.1) 
 
 ## Usage
 ### Initialize Project
-#### Create Rails Project
+1. Create Rails Project
+
 ```
 $ make init
 ```
 
-#### Modify database.yml
+2. Modify database.yml
+
 ```diff
  default: &default
    adapter: postgresql
@@ -21,31 +23,33 @@ $ make init
    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 ```
 
-#### Build
+3. Build
+
 ```
 $ make build
 ```
 
 ### Destroy Project
-#### Cleanup
 ```
 $ make clean
 ```
 
 ### Development
-#### Bundle Update & Install
+#### Bundle
 ```
 $ make bundle.update
 $ make bundle.install
 ```
 
-#### Docker Up & Down
+#### Docker
 ```
 $ make docker.up
-$ make docker .down
+$ make docker.down
 ```
 
-#### Rails Test
+#### Rails
 ```
+$ make rails.new
 $ make rails.test
+$ make rails.console
 ```
