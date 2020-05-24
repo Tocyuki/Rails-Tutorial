@@ -9,10 +9,14 @@ services:
       POSTGRES_PASSWORD: postgres
     volumes:
       - ./db_data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
 
   web:
     container_name: rails_tutorial_web
     build: ./
+    environment:
+      PGPASSWORD: postgres
     volumes:
       - ./src:/sample_app
     ports:

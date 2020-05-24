@@ -6,7 +6,7 @@ Study [Rails Tutorial](https://railstutorial.jp/chapters/beginning?version=5.1) 
 1. Create Rails Project
 
 ```
-$ make init
+$ make new
 ```
 
 2. Modify database.yml
@@ -26,7 +26,7 @@ $ make init
 3. Build
 
 ```
-$ make build
+$ make setup
 ```
 
 ### Destroy Project
@@ -34,7 +34,7 @@ $ make build
 $ make clean
 ```
 
-### Development
+### Development Commands
 #### Bundle
 ```
 $ make bundle.update
@@ -49,7 +49,15 @@ $ make docker.down
 
 #### Rails
 ```
-$ make rails.new
-$ make rails.test
-$ make rails.console
+$ make new
+$ make build
+$ make build.web
+$ make build.db
+$ make test
+$ make test.controllers
+$ make test.models
+$ make console
+$ make console.sandbox
+$ make db.migrate
+$ make db.connect
 ```
