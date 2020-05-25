@@ -59,5 +59,7 @@ $ make test.models
 $ make console
 $ make console.sandbox
 $ make db.migrate
+$ make db.reset
+$ make db.rollback
 $ make db.connect
 ```

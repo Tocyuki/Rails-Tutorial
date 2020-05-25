@@ -52,6 +52,9 @@ db.create:
 db.migrate:
 	docker-compose run --rm web rake db:migrate
 
+db.migrate.reset:
+	docker-compose run --rm web rake db:migrate:reset
+
 db.rollback:
 	docker-compose run --rm web rake db:rollback
 
