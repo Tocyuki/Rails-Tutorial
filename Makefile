@@ -1,7 +1,7 @@
 .PHONY: setup clean
 
 setup:
-	make build
+	make docker.build
 	make db.create
 	make docker.up
 
@@ -9,39 +9,66 @@ clean:
 	rm -rf db_data src
 	make docker.down
 
-build:
+docker.build:
 	docker-compose build
 
-build.web:
+docker.build.web:
 	docker-compose build web
+
+docker.build.db:
+	docker-compose build db
 
 docker.up:
 	docker-compose up -d
 
+docker.up.web:
+	docker-compose up -d web
+
+docker.up.db:
+	docker-compose up -d db
+
 docker.down:
 	docker-compose down
+
+docker.down.web:
+	docker-compose down web
+
+docker.down.db:
+	docker-compose down db
+
+docker.restart:
+	docker-compose restart
 
 docker.restart.web:
 	docker-compose restart web
 
-new:
+docker.restart.db:
+	docker-compose restart web
+
+rails.new:
 	docker-compose run --rm web rails _5.1.6_ new . --force --no-deps --database=postgresql
 	docker-compose run --rm web rm -rf .git* README.md
 
-test:
+rails.test:
 	docker-compose run --rm web rails test
 
-test.controllers:
+rails.test.controllers:
 	docker-compose run --rm web rails test:controllers
 
-test.models:
+rails.test.models:
 	docker-compose run --rm web rails test:models
 
-console:
+rails.test.integration:
+	docker-compose run --rm web rails test:integration
+
+rails.console:
 	docker-compose run --rm web rails console
 
-console.sandbox:
+rails.console.sandbox:
 	docker-compose run --rm web rails console --sandbox
+
+rails.routes:
+	docker-compose run --rm web rails routes
 
 db.connect:
 	docker-compose run --rm web psql -h db -U postgres -d sample_app_development

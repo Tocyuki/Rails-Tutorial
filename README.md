@@ -6,7 +6,7 @@ Study [Rails Tutorial](https://railstutorial.jp/chapters/beginning?version=5.1) 
 1. Create Rails Project
 
 ```
-$ make new
+$ make rails.new
 ```
 
 2. Modify database.yml
@@ -45,19 +45,23 @@ $ make bundle.install
 ```
 $ make docker.up
 $ make docker.down
+$ make docker.build
+$ make docker.build.web
+$ make docker.build.db
 ```
 
 #### Rails
 ```
-$ make new
-$ make build
-$ make build.web
-$ make build.db
-$ make test
-$ make test.controllers
-$ make test.models
-$ make console
-$ make console.sandbox
+$ make rails.new
+$ make rails.test
+$ make rails.test.controllers
+$ make rails.test.models
+$ make rails.console
+$ make rails.console.sandbox
+```
+
+#### Rake
+```
 $ make db.migrate
 $ make db.reset
 $ make db.rollback
