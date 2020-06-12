@@ -85,6 +85,9 @@ db.migrate.reset:
 db.rollback:
 	docker-compose run --rm web rake db:rollback
 
+db.seed:
+	docker-compose run --rm web rake db:seed
+
 bundle.install:
 	docker-compose run --rm web bundle install
 
