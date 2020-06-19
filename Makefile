@@ -93,3 +93,6 @@ bundle.install:
 
 bundle.update:
 	docker-compose run --rm web bundle update
+
+bundle.exec.guard:
+	docker-compose run --rm web bundle exec guard

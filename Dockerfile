@@ -1,6 +1,7 @@
 FROM ruby:2.6
 
 ENV APP_DIR /sample_app
+ENV LANG C.UTF-8
 
 RUN apt-get update -qq \
  && apt-get install -y nodejs postgresql-client \
