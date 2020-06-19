@@ -39,6 +39,7 @@ $ make clean
 ```
 $ make bundle.update
 $ make bundle.install
+$ make bundle.exec.guard
 ```
 
 #### Docker
